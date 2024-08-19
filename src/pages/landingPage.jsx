@@ -47,23 +47,24 @@ function LandingPage () {
                     <iframe src="https://zeno.fm/player/richieart-fm" width="768" height="300" frameborder="0" scrolling="no"></iframe>
                     <a href="https://zeno.fm/" target="_blank">A Zeno.FM Station</a>
                 </div>
-                <div className='flex justify-center items-center place-items-center px-[150px] mt-[30px] text-white'>
-                    <div className='com1 flex justify-center items-center flex-col px-[30px] py-[90px] rounded-xl'>
+                <div className='grid grid-cols-2 gap place-items-center mt-[30px] text-white'>
+                    <div className='com1 w-[55%] py-[40px] pl-[50px] rounded-xl'>
                         <h2 className='text-[25px] font-semibold mb-[20px]'>Earn While You Listen</h2>
-                        <p className='text-[20px]'>Talktoken transforms passive listening into an active earning experience. Every minute you spend engaging with content is an opportunity to earn tokens that can be used across our platform.</p>
+                        <p className='text-[17px] w-[65%]'>Talktoken transforms passive listening into an active earning experience. Every minute you spend engaging with content is an opportunity to earn tokens that can be used across our platform.</p>
                     </div>
-                    <div className='com2 flex justify-center items-center flex-col ml-[20px] px-[30px] py-[80px]'>
+                    <div className='com2 w-[55%] py-[40px] pl-[50px] rounded-xl'>
                         <h2 className='text-[25px] font-semibold mb-[20px]'>Staking and Voting</h2>
-                        <p className='text-[20px] w-[80%]'>Stake your Talktokens on the radio stations and podcast platforms you love. Your stakes not only earn you rewards but also give you voting power to decide which content gets promoted, ensuring that the best content rises to the top.</p>
+                        <p className='text-[17px] w-[75%]'>Stake your Talktokens on the radio stations and podcast platforms you love. Your stakes not only earn you rewards but also give you voting power to decide which content gets promoted, ensuring that the best content rises to the top.</p>
                     </div>
                 </div>
-                <div className='cross flex justify-center items-center flex-col pt-[50px] px-[80px] pb-[120px] text-white mt-[40px] rounded-xl'>
+                <div className='cross flex justify-center items-center flex-col mt-[40px] rounded-md text-white py-[30px] px-[40px]'>
                     <h2 className='text-[37px] mb-[40px]'>Cross-Chain Flexibility</h2>
                     <p className='w-[45%] text-[20px]'>
                     Talktoken operates across multiple blockchain networks, providing users with the flexibility to trade, stake, 
                     and earn tokens on the platform of their choice. 
                     This cross-chain capability ensures that you have the freedom to use your tokens wherever they are most valuable.
                   </p>
+                  <a className='w-[10%]' href="" rel="noopener noreferrer"><button  className="flex justify-center items-center w-full text-center p-[10px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-blue-600 hover:text-white bg-blue-500 sm:hidden md:hidden lg:flex" type="button">Swap</button></a>
                 </div>
             </section>
             <Footer/>

@@ -22,7 +22,7 @@ body {
 .comm {
   background-image: url('/Images/Frame 15.png');
   background-position: top center;
-  background-size: auto 120%;
+  background-size: auto 130%;
   background-repeat: no-repeat; 
 }
 .com1 {
@@ -32,8 +32,8 @@ body {
 .com1::before {
   background-image: url('/Images/coms.jpeg');
   background-position: top center;
-  background-size: auto 150%;
-  background-repeat: no-repeat; 
+  background-size: cover;
+  background-repeat: no-repeat;
   content: '';
   position: absolute;
   inset: 0;
@@ -45,101 +45,23 @@ body {
 .com2 {
   background-image: url('/Images/com.png');
   background-position: top center;
-  background-size: auto 160%;
+  background-size: cover;
   background-repeat: no-repeat; 
 }
-.music {
-  background-image: url("/Images/music.jpg");
-  background-position: center center;
-  background-size: auto 270%;
-  background-repeat: no-repeat;
-}
-.p1 {
-  background-image: url("/Images/p1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(80%);
-}
-.p3 {
-  background-image: url("/Images/p3.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(80%);
-}
-.p2 {
-  background-image: url("/Images/p2.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(80%);
-}
-.sg {
-  background-image: url("/Images/sg.jpg");
-  background-position: center;
-  background-size: auto 150vw;
-  background-repeat: no-repeat;
-  filter: brightness(90%);
-}
-.pools {
-  background-image: url("/Images/pool.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.charts {
-  background-image: url("/Images/charts.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.trade {
-  background-image: url("/Images/s22.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(90%);
-}
-.collab {
+.cross {
   position: relative;
+  background: #000;
 }
-.collab::before {
-  background-image: url("/Images/collab.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.cross::before {
+  background-image: url('/Images/cross.jpg');
+  background-position: top center;
+  background-size: auto 180%;
+  background-repeat: no-repeat; 
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.3;
+  opacity: 0.7;
 }
-.collab h1, p {
+.cross h2, p {
   isolation: isolate;
 }
-.p1 {
-  background-image: url("/Images/c1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.p2 {
-  background-image: url("/Images/c2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.p3 {
-  background-image: url("/Images/c3.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.p4 {
-  background-image: url("/Images/c4.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
