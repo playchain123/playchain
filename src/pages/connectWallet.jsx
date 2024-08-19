@@ -15,12 +15,11 @@ function ConnectWallet () {
         <>
             <Navbar/>
             <div className="flex justify-center items-center self-center pt-[140px]">
-                <img className="w-[6%]" src="/Images/logo.png" alt="" />
-                <a className="text-[35px] text-white font-medium" href="/">BEATBIT</a>
+                <img className="w-[6%]" src="/Images/icon.png" alt="" />
+                <a className="text-[35px] text-black font-medium" href="/">TalkToken</a>
             </div>
-            <h1 className='text-center mt-[20px] text-white text-[30px]'>JOIN BEATBIT BY CONNECTING  WALLET</h1>
             <div className='connect text-black rounded-sm flex justify-center items-center mt-[30px]'>
-                <a href="/reels"><button className='text-white bg-[#DE0808] py-[10px] px-[20px] rounded-md text-[20px]' type='button'>Connect Wallet</button></a>
+                <a href="/reels"><button className='text-white bg-blue-500 hover:bg-blue-600 py-[10px] px-[20px] rounded-md text-[20px]' type='button'>Connect Wallet</button></a>
             </div>
         </>
     )

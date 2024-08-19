@@ -2,14 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: "Jockey One", sans-serif;
-  background-color: #1E1E1E;
+  font-family: "Kameron", sans-serif;
+  background-color: white;
+  color: black;
 }
 .header  {
-  background-image: url("/Images/Group 1.png");
-  background-position: bottom right;
-  background-size: auto 85%;
+  background-image: url('/Images/bg.png');
+  background-position: top center;
+  background-size: auto 95%;
   background-repeat: no-repeat;
+  font-family: "Kanit", sans-serif;
+}
+.coms {
+  background-image: url('/Images/b.png');
+  background-position: top center;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+}
+.comm {
+  background-image: url('/Images/Frame 15.png');
+  background-position: top center;
+  background-size: auto 120%;
+  background-repeat: no-repeat; 
+}
+.com1 {
+  position: relative;
+  background: #000;
+}
+.com1::before {
+  background-image: url('/Images/coms.jpeg');
+  background-position: top center;
+  background-size: auto 150%;
+  background-repeat: no-repeat; 
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.7;
+}
+.com1 h2, p {
+  isolation: isolate;
+}
+.com2 {
+  background-image: url('/Images/com.png');
+  background-position: top center;
+  background-size: auto 160%;
+  background-repeat: no-repeat; 
 }
 .music {
   background-image: url("/Images/music.jpg");

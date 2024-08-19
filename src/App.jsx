@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/landingPage.jsx'
 import ConnectWallet from './pages/connectWallet.jsx'
 import Reels from './pages/reels.jsx';
-import Uploads from './pages/uploads.jsx';
+import AddRadio from './pages/addRadio.jsx';
 import Pools from './pages/pools.jsx';
 import Chart from './pages/charts.jsx';
 import SubChart from './pages/subchart.jsx';
@@ -54,7 +54,7 @@ function App() {
               <Route path="/home" element={<LandingPage />} />
               <Route path="/connect" element={<ConnectWallet />} />
               <Route path="/reels" element={<Reels />} />
-              <Route path="/uploads" element={<Uploads />} />
+              <Route path="/add-radio" element={<AddRadio />} />
               <Route path="/pools" element={<Pools />} />
               <Route path="/chart" element={<Chart />} />
               <Route path="/subchart" element={<SubChart />} />
