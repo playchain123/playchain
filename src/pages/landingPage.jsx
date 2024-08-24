@@ -1,73 +1,48 @@
-// import { useState } from 'react';
 import Navbar from '../components/nav.jsx';
-import Footer from '../components/footer.jsx'
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
-// import { ReactTyped } from "react-typed";
-// import ProgressBar from "@ramonak/react-progress-bar";
-// import Video from '../assets/video.mp4';
 
 function LandingPage () {
     return (
         <>
             <Navbar/>
-            <div className="header flex justify-center items-center pt-[130px] pr-[100px] pb-[40px] pl-[80px] items-center bg-white sm:pr-[30px] sm:pl-[30px] lg:pr-[100px] lg:pl-[80px]" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <div className="w-[95%]">
-                    <div className='flex'>
-                        <h2 className="tracking-widest mb-4 text-[35px] w-[70%] z-1000 font-bold sm:text-[17px] md:text-[40px]">DECENTRALISED MEDIA DRIVEN BY YOUR PARTICIPATION</h2>
-                        <img className='w-[10%]' src="/Images/logo.png" alt="" />
+            <section>
+                <div className='flex justify-center items-center pt-[90px]'>
+                    <div className='w-[50%]'>
+                        <h1 className='grad w-[90%] text-[40px] mb-[20px]'>REVOLUTIONIZE YOUR EDUCATION WITH DEFI: Learn, Earn and Grow </h1>
+                        <p className='text-[25px]'>Staking your knowledge for financial Growth</p>
                     </div>
-                    <p className='w-[50%] text-[20px] mb-7 font-semibold sm:text-[16px] tracking-widest sm:w-[100%] md:w-[70%] lg:w-[60%] lg:text-[20px]'>"Stake, Vote, and Earn: Transforming Media Engagement"</p>
-                    <div className='bg-[#D9D9D9] b px-[30px] w-[55%] rounded-md py-[40px] flex justify-center items-center flex-col'>
-                        <p className='text-[19px] mb-[40px]'>
-                        Talktoken is an innovative media memecoin platform that revolutionizes the way users engage with 
-                        radio content and podcasts. By rewarding listeners with Talktokens for their engagement, 
-                        Talktoken creates a dynamic ecosystem where users can influence content decisions, stake 
-                        tokens on their favorite platforms, and earn rewards through active participation. This unique approach empowers both listeners and radio stations, driving a new era of interactive media experiences.
-                        </p>
-                        <a className='w-[60%] text-center' href="/connect" rel="noopener noreferrer"><button  className="flex justify-center w-[90%] text-center p-[10px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-blue-600 hover:text-white bg-blue-500 sm:hidden md:hidden lg:flex" type="button">Launch app</button></a>
-                    </div>
-                    <p className='mt-[30px] text-[27px] mb-[10px] font-semibold'>Our Values</p>
-                    <p className='text-[27px] font-semibold'>The pillar of Talktoken</p>
+                    <img  className='w-[20%]' src="/Images/CFD Trading Tipps und Fehlervermeidung 1.png" alt="" />
                 </div>
-            </div>
-            <section className='coms'>
-                <div className='comm flex justify-center items-center flex-col pt-[30px] pb-[120px] text-white'>
-                    <h2 className='text-[37px] mb-[40px]'>Community</h2>
-                    <p className='w-[45%] text-[20px]'>The Talktoken community aims to create an inclusive, decentralized media 
-                        ecosystem where users have a direct impact on the content they consume. 
-                        The community's purpose is to foster engagement, support diverse content creators, 
-                        and drive social impact through media. By empowering users to participate in content decisions and charity initiatives, the Talktoken community seeks to build a platform that benefits both creators and listeners while contributing to societal good.
+                <div className='flex justify-center items-center bg-[#19BED7] text-white mx-[20%] rounded-xl'>
+                    <p className='text-[23px] w-[90%] px-[30px] py-[30px]'>
+                        Welcome to our EduFi platform, where learning is more than just gaining knowledge—it's about securing your financial future.
+                        We've combined the power of education and decentralized finance to create a system that rewards your academic achievements with real value.
                     </p>
                 </div>
-                <div className='mt-[30px] flex justify-center items-center flex-col'>
-                    <iframe src="https://zeno.fm/player/richieart-fm" width="768" height="300" frameborder="0" scrolling="no"></iframe>
-                    <a href="https://zeno.fm/" target="_blank">A Zeno.FM Station</a>
+                <div className='flex justify-center items-center mt-[70px]'>
+                    <img className='w-[25%] mr-[40px]' src="/Images/Short-Positionen vs Long-Positionen 1.png" alt="" />
+                    <p className='text-[23px] w-[40%] px-[30px] py-[30px] bg-[#19BED7] text-white rounded-xl'>
+                        On our platform, your hard work pays off. Every educational task you complete earns you tokens, 
+                        turning your dedication into tangible rewards. 
+                        It's not just about grades anymore—it's about building wealth as you learn.
+                    </p>
                 </div>
-                <div className='grid grid-cols-2 gap place-items-center mt-[30px] text-white'>
-                    <div className='com1 w-[55%] py-[40px] pl-[50px] rounded-xl'>
-                        <h2 className='text-[25px] font-semibold mb-[20px]'>Earn While You Listen</h2>
-                        <p className='text-[17px] w-[65%]'>Talktoken transforms passive listening into an active earning experience. Every minute you spend engaging with content is an opportunity to earn tokens that can be used across our platform.</p>
-                    </div>
-                    <div className='com2 w-[55%] py-[40px] pl-[50px] rounded-xl'>
-                        <h2 className='text-[25px] font-semibold mb-[20px]'>Staking and Voting</h2>
-                        <p className='text-[17px] w-[75%]'>Stake your Talktokens on the radio stations and podcast platforms you love. Your stakes not only earn you rewards but also give you voting power to decide which content gets promoted, ensuring that the best content rises to the top.</p>
-                    </div>
+                <div className='grid grid-cols-4 gap-2 place-items-center mt-[70px]'>
+                    <img className='w-[20%]' src="/Images/Logo yearn_finance (YFI) 1.png" alt="" />
+                    <img className='w-[20%]' src="/Images/Logo SushiSwap (SUSHI) 1.png" alt="" />
+                    <img className='w-[20%]' src="/Images/Frame 15.png" alt="" />
+                    <img className='w-[30%]' src="/Images/Uniswap svela un piano di finanziamento per il rinnovamento dell'ecosistema, mentre il prezzo di UNI tocca i minimi di 4 mesi Periodico Daily 1.png" alt="" />
                 </div>
-                <div className='cross flex justify-center items-center flex-col mt-[40px] rounded-md text-white py-[30px] px-[40px]'>
-                    <h2 className='text-[37px] mb-[40px]'>Cross-Chain Flexibility</h2>
-                    <p className='w-[45%] text-[20px]'>
-                    Talktoken operates across multiple blockchain networks, providing users with the flexibility to trade, stake, 
-                    and earn tokens on the platform of their choice. 
-                    This cross-chain capability ensures that you have the freedom to use your tokens wherever they are most valuable.
-                  </p>
-                  <a className='w-[10%]' href="" rel="noopener noreferrer"><button  className="flex justify-center items-center w-full text-center p-[10px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-blue-600 hover:text-white bg-blue-500 sm:hidden md:hidden lg:flex" type="button">Swap</button></a>
+                <div className='flex justify-center items-center flex-col mt-[80px]'>
+                    <h2 className='text-[30px]'>Seamless Integration of Education and DeFi</h2>
+                    <p className='w-[50%] my-[20px] text-[20px] font-thin'>
+                        We've designed our platform to be user-friendly and intuitive, making it easy for you to transition between learning and finance. 
+                        Whether you're new to DeFi or a seasoned pro, our platform provides the tools and resources you need to succeed.
+                    </p>
+                    <div className='flex justify-center items-center'>
+                        <img className='w-[25%]' src="/Images/seamless.png" alt="" />
+                    </div>
                 </div>
             </section>
-            <Footer/>
         </>
     )
 }

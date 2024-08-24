@@ -2,66 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: "Kameron", sans-serif;
+  font-family: "Iceberg", sans-serif;
   background-color: white;
   color: black;
 }
-.header  {
-  background-image: url('/Images/bg.png');
-  background-position: top center;
-  background-size: auto 95%;
-  background-repeat: no-repeat;
-  font-family: "Kanit", sans-serif;
-}
-.coms {
-  background-image: url('/Images/b.png');
-  background-position: top center;
-  background-size: auto 90%;
-  background-repeat: no-repeat;
-}
-.comm {
-  background-image: url('/Images/Frame 15.png');
-  background-position: top center;
-  background-size: auto 130%;
-  background-repeat: no-repeat; 
-}
-.com1 {
-  position: relative;
-  background: #000;
-}
-.com1::before {
-  background-image: url('/Images/coms.jpeg');
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.7;
-}
-.com1 h2, p {
-  isolation: isolate;
-}
-.com2 {
-  background-image: url('/Images/com.png');
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat; 
-}
-.cross {
-  position: relative;
-  background: #000;
-}
-.cross::before {
-  background-image: url('/Images/cross.jpg');
-  background-position: top center;
-  background-size: auto 180%;
-  background-repeat: no-repeat; 
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.7;
-}
-.cross h2, p {
-  isolation: isolate;
+.grad {
+  background: linear-gradient(to right, #000000,#E25A5A,#19BED7); 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
 }
