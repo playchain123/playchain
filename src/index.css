@@ -50,7 +50,7 @@ body {
 }
 .cross {
   position: relative;
-  background: #000;
+  background-color: #000;
 }
 .cross::before {
   background-image: url('/Images/cross.jpg');
@@ -60,8 +60,46 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.7;
+  opacity: 0.5;
 }
-.cross h2, p {
+.cross h2, p, button {
   isolation: isolate;
+}
+.charity {
+  position: relative;
+  background-color: rgb(70, 68, 68);
+}
+.charity::before {
+  background-image: url('/Images/charity.jpg');
+  background-position: center;
+  background-size: auto 150%;
+  background-repeat: no-repeat; 
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+}
+.charity h2, p {
+  isolation: isolate;
+}
+.play {
+  position: relative;
+  background-color: #000;
+}
+.play::before {
+  background-image: url('/Images/98b0ccbc7de2c9e37b1d1a5764aacfc4.jpg');
+  background-position: top center;
+  background-size: auto 128%;
+  background-repeat: no-repeat;
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+}
+.play h2, button {
+  isolation: isolate;
+}
+.radio::placeholder {
+  color: #000;
+  font-weight: bold;
 }

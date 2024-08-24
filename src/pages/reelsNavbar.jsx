@@ -23,7 +23,7 @@ function ReelsNavBar () {
                         <li className="text-center font-semibold"><a className='pr-3' href="/">Tokenmics</a></li>
                         <li className="text-center font-semibold"><a className='pr-3' href="/">Integration</a></li>
                         <li className="text-center font-semibold"><a className='pr-3' href="/">Swap</a></li>
-                        <a href="/connect" rel="noopener noreferrer"><img className="w-[25%] ml-[30px]" src="/Images/Ellipse 1.png" alt="" srcSet="" /></a>
+                        <a href="/" rel="noopener noreferrer"><img className="w-[25%] ml-[30px]" src="/Images/Ellipse 1.png" alt="" srcSet="" /></a>
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">

@@ -1,16 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/landingPage.jsx'
-import ConnectWallet from './pages/connectWallet.jsx'
-import Reels from './pages/reels.jsx';
 import AddRadio from './pages/addRadio.jsx';
+import AddPodcast from './pages/addPodcast.jsx';
+import Listen from './pages/listen.jsx';
 import Pools from './pages/pools.jsx';
-import Chart from './pages/charts.jsx';
-import SubChart from './pages/subchart.jsx';
-import Trade from './pages/trade.jsx';
-import SubTrade from './pages/subtrade.jsx';
-import TopChart from './pages/topchart.jsx';
-import Collaboration from './pages/collaboration.jsx';
-import Chat from './pages/chat.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -52,17 +45,10 @@ function App() {
           <Routes>
               <Route index element={<LandingPage />} />
               <Route path="/home" element={<LandingPage />} />
-              <Route path="/connect" element={<ConnectWallet />} />
-              <Route path="/reels" element={<Reels />} />
               <Route path="/add-radio" element={<AddRadio />} />
+              <Route path="/add-podcast" element={<AddPodcast />} />
+              <Route path="/listen" element={<Listen />} />
               <Route path="/pools" element={<Pools />} />
-              <Route path="/chart" element={<Chart />} />
-              <Route path="/subchart" element={<SubChart />} />
-              <Route path="/trade" element={<Trade />} />
-              <Route path="/subtrade" element={<SubTrade />} />
-              <Route path="/topchart" element={<TopChart />} />
-              <Route path="/collab" element={<Collaboration />} />
-              <Route path="/chat" element={<Chat />} />
           </Routes>
         </BrowserRouter>
     </>
