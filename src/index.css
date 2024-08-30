@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: "Kameron", sans-serif;
+  font-family: "Kanit", sans-serif;
   background-color: white;
   color: black;
 }
 .header  {
   background-image: url('/Images/bg.png');
   background-position: top center;
-  background-size: auto 95%;
+  background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Kanit", sans-serif;
 }
 .coms {
   background-image: url('/Images/b.png');

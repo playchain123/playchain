@@ -1,4 +1,3 @@
-// import { N } from "ethers";
 import { useState } from "react";
 
 function NavBar () {
@@ -12,7 +11,7 @@ function NavBar () {
                 <nav className="flex justify-between items-center  my-[10px] mx-10 h-10 pb-13 sm:mx-5 lg:mx-10">
                     <div className="flex justify-between items-center w-[100%] sm:w-[100%] md:w-[100%] lg:w-[20%]">
                         <div className="flex justify-start items-center self-center">
-                            <img className="w-[18%]" src="/Images/icon.png" alt="" />
+                            <img className="w-[15%]" src="/Images/logo.png" alt="" />
                             <a className="text-[23px] font-medium" href="/">TalkToken</a>
                         </div>
                         <div className="w-0 sm:w-7 md:w-8 lg:w-0" onClick={showNav}>
