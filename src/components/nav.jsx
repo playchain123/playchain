@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import { useAccount } from 'wagmi';
 
 function NavBar () {
     const [nav, setNav] = useState(false);
     const showNav = ()  => {
        setNav(!nav)
     }
+    const navigate = useNavigate();
+    const { address, isConnecting, isDisconnected } = useAccount();
+    
+    useEffect(() => {
+        if (address && !isConnecting) {
+          navigate('/trade');
+        }
+      }, [address, isConnecting, history]);
     return (
         <>
             <div className="fixed w-full z-[1000] p-[5px] py-2 bg-transparent shadow-lg">
@@ -23,7 +33,8 @@ function NavBar () {
                         <li className="text-center font-semibold"><a className='pr-3' href="/">Tokenmics</a></li>
                         <li className="text-center font-semibold"><a className='pr-3' href="">Integration</a></li>
                         <li className="text-center font-semibold"><a className='pr-3' href="">Swap</a></li>
-                        <a href="/trade" rel="noopener noreferrer"><button  className="flex p-[10px] rounded-xl text-[14px] font-medium shadow-md text-white hover:bg-green-700 hover:text-white bg-[#1C7404] sm:hidden md:hidden lg:flex" type="button">Connect Wallet</button></a>
+                        <button onClick={navigate}><w3m-connect-button/></button>
+                        {/* <button  className="flex p-[10px] rounded-xl text-[14px] font-medium shadow-md text-white hover:bg-green-700 hover:text-white bg-[#1C7404] sm:hidden md:hidden lg:flex" type="button">Connect Wallet</button> */}
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">

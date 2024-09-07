@@ -23,7 +23,7 @@ function ReelsNavBar () {
                         <li className="text-center font-semibold"><a className='pr-3' href="/">Events</a></li>
                         <li className="text-center font-semibold"><a className='pr-3' href="/">Nfts</a></li>
                         <li className="text-center font-semibold"><a className='pr-3' href="/">Trade</a></li>
-                        <a href="/" rel="noopener noreferrer"><button  className="flex p-[10px] rounded-xl text-[14px] font-medium shadow-md text-white hover:bg-green-700 hover:text-white bg-[#1C7404] sm:hidden md:hidden lg:flex" type="button">Connect Wallet</button></a>
+                        <w3m-account-button/>
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">
