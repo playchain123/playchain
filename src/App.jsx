@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/landingPage.jsx'
-import AddRadio from './pages/addRadio.jsx';
-import AddPodcast from './pages/addPodcast.jsx';
-import Listen from './pages/listen.jsx';
-import Pools from './pages/pools.jsx';
+import Trade from './pages/trade.jsx';
+import Earns from './pages/earns.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -45,10 +43,8 @@ function App() {
           <Routes>
               <Route index element={<LandingPage />} />
               <Route path="/home" element={<LandingPage />} />
-              <Route path="/add-radio" element={<AddRadio />} />
-              <Route path="/add-podcast" element={<AddPodcast />} />
-              <Route path="/listen" element={<Listen />} />
-              <Route path="/pools" element={<Pools />} />
+              <Route path="/trade" element={<Trade />} />
+              <Route path="/earn" element={<Earns />} />
           </Routes>
         </BrowserRouter>
     </>
