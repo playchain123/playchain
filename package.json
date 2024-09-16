@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cosmjs/stargate": "^0.32.4",
     "@ethersproject/shims": "^5.7.0",
     "@json-rpc-tools/utils": "^1.7.6",
+    "@keplr-wallet/types": "^0.12.127",
     "@ramonak/react-progress-bar": "^5.2.0",
     "@react-native-async-storage/async-storage": "^1.24.0",
     "@react-native-community/netinfo": "^11.3.2",
@@ -20,6 +22,7 @@
     "@walletconnect/web3wallet": "^1.13.0",
     "@web3modal/wagmi": "^5.0.11",
     "aos": "^2.3.4",
+    "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "ethers": "^6.13.2",
     "fast-text-encoding": "^1.0.6",

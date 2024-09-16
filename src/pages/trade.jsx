@@ -1,6 +1,43 @@
+import { useState, useEffect } from "react";
 import ReelsNavBar from "./reelsNavbar"
 import Sidemenu from "../components/sidemenu"
-function Trade () {
+import axios from 'axios';
+
+function Trade ({ account }) {
+    const [trades, setTrades] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const fetchTrades = async () => {
+        setLoading(true);
+        setError(null);
+    
+        try {
+          // Replace with the correct endpoint for fetching trades
+          const response = await axios.get('https://b.testnet.kiivalidator.com:26658/');
+          
+          if (response.data.txs.length > 0) {
+            setTrades(response.data.txs); // Assuming transactions come in response.data.txs
+          } else {
+            setError('No transactions found for this account.');
+          }
+           // Assuming the trades data comes as response.data
+        } catch (err) {
+          console.error('Error fetching trades:', err);
+          setError('Failed to fetch trades.');
+        } finally {
+          setLoading(false);
+        }
+      };
+    
+      useEffect(() => {
+        if (account) {
+          fetchTrades(); // Fetch trades when the account is available
+        }
+      }, [account]);
+    
+      if (loading) return <p>Loading trades...</p>;
+      if (error) return <p>{error}</p>;
+    
     return (
         <>
             <ReelsNavBar/>
@@ -55,6 +92,33 @@ function Trade () {
                             <p className="text-white">0.14560kii <span className="text-[#29AF04]">+6.20%</span></p>
                         </div>
                     </div>
+                </div>
+                <div className="text-white">
+                    <h2>Account Trades for {account}</h2>
+                    {trades.length > 0 ? (
+                        <table>
+                        <thead>
+                            <tr>
+                            <th>Trade ID</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {trades.map((trade) => (
+                            <tr key={trade.id}>
+                                <td>{trade.id}</td>
+                                <td>{trade.type}</td>
+                                <td>{trade.amount}</td>
+                                <td>{new Date(trade.date).toLocaleDateString()}</td>
+                            </tr>
+                            ))}
+                        </tbody>
+                        </table>
+                    ) : (
+                        <p>No trades found for this account.</p>
+                    )}
                 </div>
             </section>
         </>
