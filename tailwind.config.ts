@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom MetaPlayX colors
+				meta: {
+					purple: '#6e25ca',
+					blue: '#2563eb',
+					cyan: '#06b6d4',
+					green: '#10b981',
+					neon: '#22ff88',
+					dark: '#0f0a19',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,25 +80,41 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-position': '0% 50%'
 					},
-					to: {
-						height: '0'
+					'50%': {
+						'background-position': '100% 50%'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'gradient-x': 'gradient-x 15s ease infinite'
+			},
+			backgroundImage: {
+				'cyber-grid': 'linear-gradient(rgba(66, 4, 134, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(66, 4, 134, 0.1) 1px, transparent 1px)',
+				'hero-glow': 'radial-gradient(circle at center, rgba(106, 37, 202, 0.3), transparent 70%)',
+				'card-gradient': 'linear-gradient(135deg, rgba(106, 37, 202, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%)'
 			}
 		}
 	},
