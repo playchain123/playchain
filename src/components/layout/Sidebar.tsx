@@ -1,6 +1,6 @@
 
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Menu, X, Home, Coins, Image, Bot, Users } from "lucide-react";
@@ -9,6 +9,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 768px)");
   
   // Auto-collapse on mobile
@@ -21,6 +22,20 @@ const Sidebar = () => {
     { name: "Arbitrage Bot", path: "/arbitrage-bot", icon: Bot },
     { name: "RestakeDAO", path: "/restake-studio", icon: Users },
   ];
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    if (isMobile) {
+      setIsOpen(false);
+    }
+  };
+
+  // Close sidebar on route change on mobile
+  useEffect(() => {
+    if (isMobile) {
+      setIsOpen(false);
+    }
+  }, [location.pathname, isMobile]);
 
   return (
     <>
@@ -73,17 +88,18 @@ const Sidebar = () => {
           {/* Navigation */}
           <nav className="flex-1 py-6 px-2 space-y-1 overflow-y-auto">
             {navItems.map((item) => (
-              <Link
+              <Button
                 key={item.path}
-                to={item.path}
+                onClick={() => handleNavigation(item.path)}
                 className={cn(
-                  "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200",
+                  "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 justify-start w-full",
                   "hover:bg-white/5 group",
                   location.pathname === item.path 
                     ? "bg-white/10 text-meta-neon" 
                     : "text-gray-300",
                   !effectiveIsOpen && "md:justify-center"
                 )}
+                variant="ghost"
               >
                 <item.icon className={cn(
                   "h-5 w-5", 
@@ -92,7 +108,7 @@ const Sidebar = () => {
                     : "text-gray-400 group-hover:text-white"
                 )} />
                 {effectiveIsOpen && <span>{item.name}</span>}
-              </Link>
+              </Button>
             ))}
           </nav>
 
