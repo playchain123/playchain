@@ -7,7 +7,7 @@ import { Menu, X, Home, Coins, Image, Bot, Users } from "lucide-react";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Start closed on mobile
   const location = useLocation();
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -37,6 +37,11 @@ const Sidebar = () => {
     }
   }, [location.pathname, isMobile]);
 
+  // Auto-set sidebar state based on screen size when component mounts
+  useEffect(() => {
+    setIsOpen(!isMobile);
+  }, [isMobile]);
+
   return (
     <>
       {/* Mobile Overlay */}
@@ -53,7 +58,7 @@ const Sidebar = () => {
           "h-screen bg-meta-dark border-r border-white/5 z-30",
           "transition-all duration-300 ease-in-out",
           effectiveIsOpen 
-            ? "w-64 fixed md:sticky top-0 left-0" 
+            ? "w-64 fixed md:relative md:w-64" 
             : "w-0 -translate-x-full md:w-16 md:translate-x-0"
         )}
       >
