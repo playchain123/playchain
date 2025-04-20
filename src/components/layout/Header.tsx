@@ -35,9 +35,12 @@ const Header = () => {
   };
 
   return (
-    <header className="h-16 border-b border-white/5 px-6 flex items-center justify-between bg-meta-dark/80 backdrop-blur-sm">
-      <div>
-        {/* App name would go here */}
+    <header className="h-16 border-b border-white/5 px-6 flex items-center justify-between bg-meta-dark/80 backdrop-blur-sm sticky top-0 z-20">
+      <div className="flex items-center">
+        <div className="flex items-center gap-2 ml-2">
+          <div className="h-8 w-8 rounded-md bg-gradient-to-r from-meta-purple to-meta-blue md:hidden" />
+          <span className="font-bold text-xl hidden md:block">MetaPlayX</span>
+        </div>
       </div>
 
       <div className="flex items-center gap-2">

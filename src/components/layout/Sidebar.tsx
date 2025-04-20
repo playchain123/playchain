@@ -7,7 +7,7 @@ import { Menu, X, Home, Coins, Image, Bot, Users } from "lucide-react";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false); // Start closed on mobile
+  const [isOpen, setIsOpen] = useState(false); // Always start closed on mobile
   const location = useLocation();
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -37,7 +37,7 @@ const Sidebar = () => {
     }
   }, [location.pathname, isMobile]);
 
-  // Auto-set sidebar state based on screen size when component mounts
+  // Auto-set sidebar state based on screen size
   useEffect(() => {
     setIsOpen(!isMobile);
   }, [isMobile]);
@@ -57,8 +57,9 @@ const Sidebar = () => {
         className={cn(
           "h-screen bg-meta-dark border-r border-white/5 z-30",
           "transition-all duration-300 ease-in-out",
+          isMobile ? "fixed" : "relative",
           effectiveIsOpen 
-            ? "w-64 fixed md:relative md:w-64" 
+            ? "w-64 md:w-64" 
             : "w-0 -translate-x-full md:w-16 md:translate-x-0"
         )}
       >
